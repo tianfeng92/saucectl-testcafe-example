@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": { 
+			"saucederp": ["libs/saucederp/src/index.ts"]
+		},
+		"resolveJsonModule": true,
+	}
+}

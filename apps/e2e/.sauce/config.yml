@@ -1,0 +1,28 @@
+apiVersion: v1alpha
+kind: testcafe
+sauce:
+  region: us-west-1
+  concurrency: 2 # Controls how many suites are executed at the same time.
+  metadata:
+    tags:
+      - e2e
+      - release team
+      - other tag
+    build: Release $CI_COMMIT_SHORT_SHA
+testcafe:
+  version: 3.4.0
+# Controls what files are available in the context of a test run (unless explicitly excluded by .sauceignore).
+rootDir: ./
+suites:
+  - name: "Chrome on macOS"
+    browserName: "chrome"
+    src:
+      - "apps/e2e/tests/*.test.ts" # test files glob
+    platformName: "macOS 12"
+    compilerOptions:
+      typescript:
+        configPath: "tsconfig.json"
+
+npm:
+  dependencies:
+    - "tsconfig-paths"

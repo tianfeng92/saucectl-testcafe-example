@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "testcafe": "3.4.0",
+    "testcafe-browser-provider-saucelabs": "^3.0.0",
+    "tsconfig-paths": "^4.2.0"
+  }
+}

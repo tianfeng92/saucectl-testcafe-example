@@ -1,0 +1,28 @@
+# .sauceignore
+
+# Ignore all files by default.
+/*
+
+# Ignore exceptions in root
+!.sauceignore
+!package.json
+
+# @walmart-web/e2e-team
+!apps
+apps/*
+!apps/us
+apps/us/*
+!apps/us/e2e
+apps/us/e2e/*
+!apps/us/e2e/full-regression
+!apps/us/e2e/post-prod
+!apps/us/e2e/sanity
+!apps/us/e2e/utils
+
+# Ignore specific files at all locations
+*.yml
+*.md
+.eslintrc.json
+project.json
+
+
